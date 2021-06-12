@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class passwordValidatorTest {
+class PasswordValidatorTest {
 
     @Test
     void does_passwordStrength_reject_long_bad_passwords() {
@@ -28,7 +28,7 @@ class passwordValidatorTest {
         char[] password = "123four".toCharArray();
 
         //when
-        int actual = passwordValidator.hasHowManyNumbers(password);
+        int actual = PasswordValidator.hasHowManyNumbers(password);
         int expected = 3;
 
         //then
@@ -42,7 +42,7 @@ class passwordValidatorTest {
         char[] password = "1two34".toCharArray();
 
         //when
-        int actual = passwordValidator.hasHowManyChar(password);
+        int actual = PasswordValidator.hasHowManyChar(password);
         int expected = 3;
 
         //then
@@ -55,7 +55,7 @@ class passwordValidatorTest {
         char[] password = "thisIsaBadPassWord".toCharArray();
 
         //when
-        boolean actual = passwordValidator.isItStrong(password);
+        boolean actual = PasswordValidator.isItStrong(password);
         boolean expected = false;
 
         //then
@@ -68,7 +68,7 @@ class passwordValidatorTest {
         char[] password = "ThisIs1GoodPa$$word".toCharArray();
 
         //when
-        boolean actual = passwordValidator.howStrong(password);
+        boolean actual = PasswordValidator.howStrong(password);
         boolean expected = true;
 
         //then

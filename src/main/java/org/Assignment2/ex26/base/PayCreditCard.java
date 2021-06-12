@@ -43,8 +43,30 @@ Create a version of the program that lets the user choose whether to figure out 
 number of months until payoff or the amount needed to pay per month.
  */
 
+import java.util.Scanner;
+
 public class PayCreditCard {
+    private static final Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
 
+        System.out.println("What is your balance? 5000");
+        double balance = Double.parseDouble(in.nextLine());
+
+        System.out.println("What is the APR on the card (as a percent)? 12");
+        double APR = Double.parseDouble(in.nextLine());
+
+        System.out.println("What is the monthly payment you can make? 100");
+        double monthlyPayment = Double.parseDouble(in.nextLine());
+
+        String print = String.format("It will take you %d months to pay off this card.",
+                MonthsUntilPaidOff.calculateMonthsUntilPaidOff(balance, APR, monthlyPayment));
+
+        printing(print);
+    }
+
+    private static void printing(String print)
+    {
+        System.out.println(print);
     }
 }

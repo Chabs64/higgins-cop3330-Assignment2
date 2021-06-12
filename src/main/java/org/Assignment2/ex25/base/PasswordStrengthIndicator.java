@@ -39,7 +39,7 @@ public class PasswordStrengthIndicator {
     public static void main(String[] args) {
         String print;
         String UserPassword;
-        passwordValidator password = new passwordValidator();
+        PasswordValidator password = new PasswordValidator();
 
         for(int i = 0; i < 4; i++)
         {

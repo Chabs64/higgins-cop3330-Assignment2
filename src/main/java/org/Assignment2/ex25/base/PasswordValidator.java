@@ -1,6 +1,6 @@
 package org.Assignment2.ex25.base;
 
-public class passwordValidator {
+public class PasswordValidator {
 
 /*
     A very weak password contains only numbers and is fewer than eight characters.
