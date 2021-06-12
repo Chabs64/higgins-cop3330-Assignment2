@@ -60,20 +60,21 @@ public class ValidatingInputs {
     public static void main(String[] args) {
 
         System.out.println("Enter the first name: J");
+        fName = in.nextLine();
 
         System.out.println("Enter the last name:");
+        lName = in.nextLine();
 
         System.out.println("Enter the ZIP code: ABCDE");
+        zipCode = in.nextLine();
 
         System.out.println("Enter an employee ID: A12-1234");
+        employeeID = in.nextLine();
 
-        System.out.println("\"J\" is not a valid first name. It is too short.");
+        ValidateInput validate = new ValidateInput();
 
-        System.out.println("The last name must be filled in.");
-
-        System.out.println("The ZIP code must be numeric.");
-
-        System.out.println("A12-1234 is not a valid ID.");
+        validate.validateInput(fName, lName, zipCode, employeeID);
 
     }
+
 }
