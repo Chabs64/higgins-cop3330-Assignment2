@@ -29,5 +29,14 @@ public class AddingNumbers {
 
     public static void main(String[] args) {
 
+        int total=0;
+
+        for(int i =0; i<5; i++) {
+            System.out.println("Enter a number:");
+            total += Integer.parseInt(in.nextLine());
+        }
+
+        System.out.printf("The total is %d", total);
+
     }
 }
