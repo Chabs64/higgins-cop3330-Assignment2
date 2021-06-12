@@ -50,13 +50,13 @@ public class PayCreditCard {
 
     public static void main(String[] args) {
 
-        System.out.println("What is your balance? 5000");
+        System.out.println("What is your balance? ");
         double balance = Double.parseDouble(in.nextLine());
 
-        System.out.println("What is the APR on the card (as a percent)? 12");
+        System.out.println("What is the APR on the card (as a percent)? ");
         double APR = Double.parseDouble(in.nextLine());
 
-        System.out.println("What is the monthly payment you can make? 100");
+        System.out.println("What is the monthly payment you can make? ");
         double monthlyPayment = Double.parseDouble(in.nextLine());
 
         String print = String.format("It will take you %d months to pay off this card.",

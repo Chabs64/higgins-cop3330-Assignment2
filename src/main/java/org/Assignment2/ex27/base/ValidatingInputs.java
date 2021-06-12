@@ -4,6 +4,8 @@ package org.Assignment2.ex27.base;
  *  Copyright 2021 Chad Higgins
  */
 
+import java.util.Scanner;
+
 /*
 Large functions aren’t very usable or maintainable.
 It makes a lot of sense to break down the logic of a program into smaller functions that do one thing each.
@@ -48,7 +50,30 @@ Implement this as a GUI application or web application that gives immediate feed
 Repeat the process if the input is not valid.
  */
 public class ValidatingInputs {
+    private static final Scanner in = new Scanner(System.in);
+
+    private static String fName;
+    private static String lName;
+    private static String zipCode;
+    private static String employeeID;
+
     public static void main(String[] args) {
+
+        System.out.println("Enter the first name: J");
+
+        System.out.println("Enter the last name:");
+
+        System.out.println("Enter the ZIP code: ABCDE");
+
+        System.out.println("Enter an employee ID: A12-1234");
+
+        System.out.println("\"J\" is not a valid first name. It is too short.");
+
+        System.out.println("The last name must be filled in.");
+
+        System.out.println("The ZIP code must be numeric.");
+
+        System.out.println("A12-1234 is not a valid ID.");
 
     }
 }
