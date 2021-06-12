@@ -44,7 +44,7 @@ public class ValidateInput {
         printValidation(OutputPrint);
     }
 
-    public boolean isName(String name)
+    public static boolean isName(String name)
     {
         if(name.length() >= 2)
             return true;
@@ -60,7 +60,7 @@ public class ValidateInput {
         return false;
     }
 
-    public boolean isNumber(String zipCode)
+    public static boolean isNumber(String zipCode)
     {
         char[] zip = zipCode.toCharArray();
 
@@ -74,7 +74,7 @@ public class ValidateInput {
         return true;
     }
 
-    public boolean isID(String ID)
+    public static boolean isID(String ID)
     {
         char[] IDArray = ID.toCharArray();
 
@@ -101,7 +101,7 @@ public class ValidateInput {
 
             if((i>2) && (i<6))
             {
-                if(!(IDArray[i] >= '0') && !(IDArray[i] <= '9'))
+                if(!(IDArray[i] >= '0' && IDArray[i] <= '9'))
                 {
                     return false;
                 }
