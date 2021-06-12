@@ -31,8 +31,49 @@ Create a GUI application or web application that displays graphical feedback as 
 As someone enters a password, determine its strength and display the result
  */
 
-public class PasswordStrengthIndicator {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
+public class PasswordStrengthIndicator {
+    private static final Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String print;
+        String UserPassword;
+        passwordValidator password = new passwordValidator();
+
+        for(int i = 0; i < 4; i++)
+        {
+            System.out.println("Enter a password");
+            UserPassword = in.nextLine();
+
+            print = getStrength(password.passwordStrength(UserPassword), UserPassword);
+
+            printing(print);
+        }
+    }
+
+    private static void printing(String print)
+    {
+        System.out.println(print);
+    }
+
+    private static String getStrength(int Strength, String password)
+    {
+        switch (Strength)
+        {
+            case 1:
+                return String.format("The password '%s' is a very weak password.\n", password);
+
+            case 2:
+                return String.format("The password '%s' is a weak password.\n", password);
+
+            case 3:
+                return String.format("The password '%s' is a strong password.\n", password);
+
+            case 4:
+                return String.format("The password '%s' is a very strong password.\n", password);
+
+            default: return String.format("The password '%s' is either not long enough or does not contain at least 1 number and 1 letter.\n", password);
+        }
     }
 }
