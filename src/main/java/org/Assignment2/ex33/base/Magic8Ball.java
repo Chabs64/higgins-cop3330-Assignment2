@@ -15,6 +15,7 @@ What's your question?
 > Will I be rich and famous?
 
 Ask again later.
+
 Constraint
 The value should be chosen randomly using a pseudo random number generator.
 Store the possible choices in a list and select one at random.
@@ -25,5 +26,23 @@ Implement this as a GUI application.
 If available, use native device libraries to allow you to “shake” the 8 ball.
  */
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Magic8Ball {
+    private static final Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        System.out.println("What is your question");
+
+        String UserResponse = in.nextLine();
+
+        Random rand = new Random();
+
+        String[] PossibleAnswers = {"Yes", "No", "Maybe", "Ask again later"};
+
+        System.out.printf("%s", PossibleAnswers[rand.nextInt(4)]);
+    }
+
 }

@@ -4,6 +4,8 @@ package org.Assignment2.ex34.base;
  *  Copyright 2021 Chad Higgins
  */
 
+import java.util.Scanner;
+
 /*
 Sometimes you have to locate and remove an entry from a list based on some criteria.
 You may have a deck of cards and need to discard one so it’s no longer in play,
@@ -31,6 +33,7 @@ John Smith
 Jackie Jackson
 Amanda Cullen
 Jeremy Goodwin
+
 Constraint
 Use an array or list to store the names.
 
@@ -40,4 +43,10 @@ Read in the list of employees from a file, with each employee on its own line.
 Write the output to the same file you read in.
  */
 public class EmployeeListRemoval {
+    private static final Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+
+    }
 }
