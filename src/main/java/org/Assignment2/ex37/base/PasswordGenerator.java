@@ -29,5 +29,14 @@ Have the program present a few options rather than a single result.
 Place the password on the user’s clipboard when generated.
  */
 
+import java.util.Scanner;
+
 public class PasswordGenerator {
+    private static final Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+
+
+    }
 }
