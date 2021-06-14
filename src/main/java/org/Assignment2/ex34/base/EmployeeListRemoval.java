@@ -4,6 +4,8 @@ package org.Assignment2.ex34.base;
  *  Copyright 2021 Chad Higgins
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -47,6 +49,39 @@ public class EmployeeListRemoval {
 
     public static void main(String[] args) {
 
+        ArrayList<String> ListEmployees = new ArrayList<String>();
+        ListEmployees.add("John Smith");
+        ListEmployees.add("Jackie Jackson");
+        ListEmployees.add("Chris Jones");
+        ListEmployees.add("Amanda Cullen");
+        ListEmployees.add("Jeremy Goodwin");
 
+        PrintList(ListEmployees);
+
+        System.out.println("\nEnter an employee name to remove: ");
+        String RemoveName = in.nextLine();
+
+        DeleteEmployee(ListEmployees, RemoveName);
+
+        PrintList(ListEmployees);
     }
+
+    public static void PrintList(ArrayList<String> List)
+    {
+        System.out.println("There are "+List.size()+" employees:");
+        for (String s : List) {
+            System.out.println(s);
+        }
+    }
+
+    public static void DeleteEmployee(ArrayList<String> List, String Name)
+    {
+        for (int i = 0; i < List.size(); i++) {
+            if (Name.equals(List.get(i)))
+            {
+                List.remove(i);
+            }
+        }
+    }
+
 }
